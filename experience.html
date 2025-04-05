@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  font-family: 'Lato', sans-serif;
+}
+
+.overlay {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0, 0.9);
+  overflow-x: hidden;
+  transition: 0.5s;
+}
+
+.overlay-content {
+  position: relative;
+  top: 25%;
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 36px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.overlay a:hover, .overlay a:focus {
+  color: #f1f1f1;
+}
+
+.overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+}
+
+@media screen and (max-height: 450px) {
+  .overlay a {font-size: 20px}
+  .overlay .closebtn {
+  font-size: 40px;
+  top: 15px;
+  right: 35px;
+  }
+}
+</style>
+</head>
+<body>
+
+<div id="myNav" class="overlay">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <div class="overlay-content">
+    <a href="menu.html">首頁</a>
+    <a href="web.html">介紹</a>
+    <a href="operate.html">PDF生成(僅限校內EMAIL)</a>
+    <a href="references.html">參考資料</a>
+  </div>
+</div>
+
+<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; 選單</span>
+<h1>製作這次專案的歷程與心得(by30406余宥希)</h1>
+<h2>緣起</h2>
+<h2>製作網頁的歷程</h2>
+<p>我先在網路上找有關於html的語法，再慢慢寫出網頁程式，最後再用Github託管</p>
+<h3>遇到的困難</h3>
+<p>因為之前對html的認識僅限於一堂社課的內容，花了蠻多心思找資料</p>
+<p>很多網站託管都需要錢，找了很多資料才想到Github有免費託管的服務</p>
+<h2>心得</h2>
+<p>訓練我解決問題的能力</p>
+<p>對HTML還有網頁更加認識與熟悉</p>
+<h2>圖片底下還有內容</h2>
+<img src="IVE.jpg".jpg" style="width:100% height:50%">
+<h1>製作這次專案的歷程與心得(by30408)吳宇鑫</h1>
+<p>一開始我們決定了三個方案:</p>
+<p>1.元首的速度表</p>
+<p>2.車站的時刻表</p>
+<p>3.學習歷程的網站</p>
+<p>經過討論之後我們決定第三個方案。之後就開始了製作網站的過程。</p>
+<p>在網頁的編寫，雖然之前的課程中有介紹如何利用Python製作網頁，但最常用的還是HTML且有人會做，因此我們的網站的語言還是HTML。</p>
+<p>接著，是要製作一個可以快速製作PDF的工具。說到排版，就會想到LaTeX。的確，LaTeX是一個強大的排版工具，可以利用類似寫程式碼的方式產生各種排的效果如調整字的大小，對齊……。而我們只要設計一個UI讓使用者輸入要的資訊，前後配好需要的LaTeX程式碼，丢給編譯器去編譯後匯出一個PDF檔就OK了。但這顯然想得太美好了。於是我們就去請教老師，後來老師就建議我們可以找看看Python中有沒有可以利用的PDF套件。經過我們在網路上搜尋後，我們找到了fpdf這個套件， 整個程式也改用fpdf來開發，並搭配Streamlit套件寫一個工具出來。</p>
+<p>這個工具的主要功能就是幫使用者可以利用類似填表單的方式把一份學習歷程PDF中該有的東西寫好後生出一份PDF檔，省出轉檔的時間。</p>
+<p>之後就開始開發。過程中很順利，沒有遇到太大的阻礙。但有一個重要的問題，網站要放哪裡?若要在網路上申請一個域名也不是一件容易的事，後來找到Github可以放網站，所以我們的網站就放在Github上。</p>
+<script>
+function openNav() {
+  document.getElementById("myNav").style.width = "100%";
+}
+
+function closeNav() {
+  document.getElementById("myNav").style.width = "0%";
+}
+</script>
+     
+</body>
+</html>

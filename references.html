@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  font-family: 'Lato', sans-serif;
+}
+
+.overlay {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0, 0.9);
+  overflow-x: hidden;
+  transition: 0.5s;
+}
+
+.overlay-content {
+  position: relative;
+  top: 25%;
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 36px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.overlay a:hover, .overlay a:focus {
+  color: #f1f1f1;
+}
+
+.overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+}
+
+@media screen and (max-height: 450px) {
+  .overlay a {font-size: 20px}
+  .overlay .closebtn {
+  font-size: 40px;
+  top: 15px;
+  right: 35px;
+  }
+}
+</style>
+</head>
+<body>
+
+<div id="myNav" class="overlay">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <div class="overlay-content">
+    <a href="menu.html">首頁</a>
+    <a href="web.html">介紹</a>
+    <a href="operate.html">PDF生成(僅限校內EMAIL)</a>
+    <a href="experience.html">歷程</a>
+  </div>
+</div>
+
+<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; 選單</span>
+<img src="芙.jpg".jpg" style="width:100%"><br>
+<h1>參考資料</h1>
+<a href="https://www.youtube.com/watch?v=N1f6_OhiSFI">https://www.youtube.com/watch?v=N1f6_OhiSFI</a><br>
+<a href="https://www.wibibi.com/info.php?tid=240#google_vignette">https://www.wibibi.com/info.php?tid=240#google_vignette</a><br>
+<a href="https://github.com/chsyu/gitwebdoc">https://github.com/chsyu/gitwebdoc</a><br>
+<a href="https://www.youtube.com/watch?v=0wXJaEB_QB0">https://www.youtube.com/watch?v=0wXJaEB_QB0</a><br>
+<a href="https://ithelp.ithome.com.tw/articles/10290880">https://ithelp.ithome.com.tw/articles/10290880</a><br>
+<a href="http://sites.xms.com.tw/board.php?courseID=142&f=doc&folderID=1240&cid=5753">http://sites.xms.com.tw/board.php?courseID=142&f=doc&folderID=1240&cid=5753</a><br>
+<script>
+function openNav() {
+  document.getElementById("myNav").style.width = "100%";
+}
+
+function closeNav() {
+  document.getElementById("myNav").style.width = "0%";
+}
+</script>
+     
+</body>
+</html>
